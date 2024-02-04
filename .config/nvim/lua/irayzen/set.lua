@@ -10,7 +10,7 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 
--- vim.opt.clipboard = "unnamedplus" -- sync the with the system clipboard
+vim.opt.clipboard = "unnamedplus" -- sync buffer clipboard the with the system clipboard
 
 vim.opt.smartindent = true
 

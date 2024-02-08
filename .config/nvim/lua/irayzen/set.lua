@@ -1,4 +1,6 @@
 -- :options to see more of them and :h vim.opt to understand what it is vim.opt
+vim.opt.guicursor = ""
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 
@@ -7,8 +9,8 @@ vim.opt.splitright = true
 
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
 
 vim.opt.clipboard = "unnamedplus" -- sync buffer clipboard the with the system clipboard
 

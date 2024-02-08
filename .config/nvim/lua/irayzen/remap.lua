@@ -27,7 +27,7 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set("i", "jk", "<Esc>")
 
 -- I change the script name to tmuxs you can find it in theprimeagen .dotfiles on github btw you should be I a tmux session to make it works
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmuxs<CR>")
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- no need to any null ls shit
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
@@ -43,7 +43,7 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/.config/nvim/lua/irayzen/packer.lua<CR>")
 
 vim.keymap.set('n', 'T', ':silent! %s//g<Left><Left>', { noremap = true })
-vim.keymap.set('n', "<leader>w", ":w<CR>")
+vim.keymap.set('n', "<leader>w", "<cmd>w<CR>")
 
 
 vim.keymap.set("n", "<leader><leader>", function()

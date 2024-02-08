@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source /home/rzan/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-bindkey -s ^f 'tmux-sessionizer\n'
+bindkey -s ^f "tmux-sessionizer\n"
 
 
 export NVM_DIR="$HOME/.nvm"

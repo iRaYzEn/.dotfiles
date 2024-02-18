@@ -9,7 +9,7 @@ vim.opt.splitright = true
 
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 0
 vim.opt.softtabstop = 4
 
 vim.opt.clipboard = "unnamedplus" -- sync buffer clipboard the with the system clipboard
@@ -18,7 +18,7 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
--- vim.opt.virtualedit = "block" -- i see this as usless thing i don't like visual block mode
+-- vim.opt.virtualedit = "block" -- i see this as useless thing i don't like visual block mode
 
 vim.opt.swapfile = false
 vim.opt.backup = false

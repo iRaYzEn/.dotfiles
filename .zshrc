@@ -10,6 +10,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
+set -o vi
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -99,8 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 source /home/rzan/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s ^f 'tmux-sessionizer\n'
 
 
 export NVM_DIR="$HOME/.nvm"

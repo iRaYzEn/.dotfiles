@@ -128,8 +128,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 ## gaps
 
-gaps inner 8
-gaps outer 2
+# gaps inner 8
+# gaps outer 2
 
 # set $fm eDP-1
 # set $sm HDMI-1
@@ -195,4 +195,3 @@ bindsym $mod+shift+x exec i3lock
 
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom -f
-exec --no-startup-id anki

@@ -37,6 +37,7 @@ return require("packer").startup(function(use)
 	use("tpope/vim-fugitive")
 	use("nvim-treesitter/nvim-treesitter-context")
 	use("nvim-treesitter/nvim-treesitter-textobjects")
+	use("nvim-telescope/telescope-symbols.nvim")
 	-- a game via thePrimeagen
 	use("ThePrimeagen/vim-be-good")
 	-- comment stuff
@@ -48,17 +49,14 @@ return require("packer").startup(function(use)
 	use("folke/tokyonight.nvim")
 	use("ellisonleao/gruvbox.nvim")
 	use("AlexvZyl/nordic.nvim")
-	use("dylanaraps/wal.vim")
-	-- colorizer
-	use("norcalli/nvim-colorizer.lua")
-	use("nvim-telescope/telescope-symbols.nvim")
 	-- nvim tree
 	use("nvim-tree/nvim-tree.lua")
+	-- devicons
 	use("nvim-tree/nvim-web-devicons")
 	-- multi visual line
 	use("mg979/vim-visual-multi")
-    -- instead of null-ls
-    use("nvimtools/none-ls.nvim")
+	-- instead of null-ls
+	use("nvimtools/none-ls.nvim")
 
 	use({
 		"kylechui/nvim-surround",

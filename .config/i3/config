@@ -126,7 +126,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 ## gaps
 
-gaps inner 24
+gaps inner 28
 gaps outer 10
 
 # set $fm eDP-1

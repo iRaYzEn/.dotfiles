@@ -127,7 +127,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 ## gaps
 
 gaps inner 28
-gaps outer 10
+gaps outer 8
 
 # set $fm eDP-1
 # set $sm HDMI-1

@@ -39,4 +39,3 @@ memory {
 disk "/" {
         format = "%avail"
 }
-

@@ -195,5 +195,6 @@ bindsym $mod+shift+x exec i3lock
 # assign [class="chromium"] 3
 # exec --no-startup-id i3-msg 'workspace 4' exec spotify
 
+exec --no-startup-id spotify
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton

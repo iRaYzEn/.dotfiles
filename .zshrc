@@ -21,15 +21,19 @@ compinit
 _comp_options+=(globdots)		# Include hidden files.
 
 set -o vi
-export KEYTIMEOUT=1
+export KEYTIMEOUT=10
 
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -v '^?' backward-delete-char
 
+bindkey -s jk '\e'
+bindkey jk vi-cmd-mode
+
+# Add "jj" shortcut to enter NORMAL mode
+bindkey -M viins 'jk' vi-cmd-mode
 
 # Use lf to switch directories and bind it to ctrl-o
 lfcd () {
@@ -42,10 +46,6 @@ lfcd () {
     fi
 }
 bindkey -s '^o' 'lfcd\n'
-
-# Edit line in vim with ctrl-e:
-autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load

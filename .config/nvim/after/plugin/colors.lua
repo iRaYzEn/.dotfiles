@@ -1,4 +1,4 @@
--- gruvbox rose-pine
+-- gruvbox rose-pine tokyonight🫥
 require("rose-pine").setup({
     disable_background = true
 })

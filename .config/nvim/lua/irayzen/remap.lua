@@ -42,10 +42,9 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/.config/nvim/lua/irayzen/packer.lua<CR>")
 
-vim.keymap.set('n', 'T', ':silent! %s//g<Left><Left>', { noremap = true })
-vim.keymap.set('n', "<leader>w", "<cmd>w<CR>")
-
+vim.keymap.set("n", "T", ":silent! %s//g<Left><Left>", { noremap = true })
+vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
 
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+	vim.cmd("so")
 end)

@@ -57,7 +57,10 @@ return require("packer").startup(function(use)
 	use("mg979/vim-visual-multi")
 	-- instead of null-ls
 	use("nvimtools/none-ls.nvim")
-
+    -- debugging
+    use('mfussenegger/nvim-dap')
+    use{ "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
+    use('leoluz/nvim-dap-go')
 	use({
 		"kylechui/nvim-surround",
 		tag = "*", -- Use for stability; omit to use `main` branch for the latest features

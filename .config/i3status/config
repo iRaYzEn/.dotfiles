@@ -17,6 +17,7 @@ general {
 
 order += "disk /"
 order += "memory"
+order += "volume master"
 order += "load"
 order += "tztime local"
 # enable it if you have laptob
@@ -29,8 +30,15 @@ order += "tztime local"
 # }
 
 tztime local {
+        # format = "<span foreground='#ff0000'>time:</span> %time"
         format = "  %Y-%m-%d %H:%M:%S"
 }
+
+# tztime berlin {
+#         format_time = "%H:%M %Z"
+#         timezone = "Europe/Berlin"
+#         hide_if_equals_localtime = true
+# }
 
 load {
         format = " %1min"
@@ -42,4 +50,12 @@ memory {
 
 disk "/" {
         format = " %avail"
+}
+
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: muted (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
 }

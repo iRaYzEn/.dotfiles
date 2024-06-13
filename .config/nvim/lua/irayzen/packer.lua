@@ -61,6 +61,10 @@ return require("packer").startup(function(use)
     use('mfussenegger/nvim-dap')
     use{ "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
     use('leoluz/nvim-dap-go')
+
+    -- php
+    use('phpactor/phpactor')
+
 	use({
 		"kylechui/nvim-surround",
 		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -70,6 +74,7 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
+
 
 	use({
 		"VonHeikemen/lsp-zero.nvim",

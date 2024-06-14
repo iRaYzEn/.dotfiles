@@ -1,4 +1,6 @@
 # before you do anything
+install these dependencies: make gcc ripgrep unzip git xclip  // through your package manager
+
 clone the repo then sudo apt install stow then inside the folder type the command "stow ."
 
 1. install i3wm => sudo apt install i3

@@ -3,12 +3,11 @@ return {
     dependencies = { 'nvim-tree/nvim-web-devicons' },
 
     config = function()
+        local rosepine_theme = require('custom.themes.lualine-theme-rosepine')
+
         require('lualine').setup {
             options = {
-                icons_enabled = true,
-                theme = 'gruvbox', -- Replace with your desired theme
-                component_separators = { left = '', right = '' },
-                section_separators = { left = '', right = '' },
+                theme = rosepine_theme
             },
             sections = {
                 lualine_a = { 'mode' },

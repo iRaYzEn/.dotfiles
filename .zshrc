@@ -153,3 +153,10 @@ export NVM_DIR="$HOME/.nvm"
 
 #php
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[[ -s $BASE16_SHELL/profile_helper.sh ]] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
+source ~/.config/base16-shell/scripts/base16-rose-pine.sh

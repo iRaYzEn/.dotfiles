@@ -6,12 +6,13 @@ lsp.ensure_installed({
 	"tsserver",
     "cssls",
     "html",
-    "gopls",
     "phpactor"
 })
 
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
+
+lsp.phpactor = true
 
 local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }

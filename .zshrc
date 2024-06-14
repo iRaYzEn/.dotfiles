@@ -137,10 +137,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source /home/rzan/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/rayzen/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 bindkey -s ^f 'tmux-sessionizer\n'
-
+#vim
+export PATH="$PATH:/opt/nvim-linux64/bin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -149,3 +150,6 @@ export NVM_DIR="$HOME/.nvm"
 # if [ -x /usr/games/cowsay -a -x /usr/games/fortune ]; then
 #     fortune | neofetch
 # fi
+
+#php
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"

@@ -31,19 +31,19 @@ order += "tztime local"
 
 tztime local {
         # format = "<span foreground='#ff0000'>time:</span> %time"
-        format = "  %Y-%m-%d %H:%M:%S"
+        format = "%Y-%m-%d %H:%M:%S"
 }
 
 load {
-        format = " %1min"
+        format = "%1min"
 }
 
 memory {
-    format = "  %used"
+    format = "%used"
 }
 
 disk "/" {
-        format = " %avail"
+        format = "%avail"
 }
 
 volume master {

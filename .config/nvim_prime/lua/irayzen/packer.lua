@@ -29,7 +29,7 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
-	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+	-- use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use("theprimeagen/harpoon")
 	use("mattn/emmet-vim")
 	use("theprimeagen/refactoring.nvim")
@@ -61,9 +61,6 @@ return require("packer").startup(function(use)
     use('mfussenegger/nvim-dap')
     use{ "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
     use('leoluz/nvim-dap-go')
-
-    -- php
-    use('phpactor/phpactor')
 
 	use({
 		"kylechui/nvim-surround",

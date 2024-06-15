@@ -187,9 +187,9 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
 
-bindsym $mod+s exec spotify 
+bindsym $mod+s exec spotify
 bindsym $mod+b exec brave-browser
-bindsym $mod+n exec nitrogen 
+bindsym $mod+n exec nitrogen
 bindsym $mod+o exec obsidian
 
 # Suspend

@@ -19,10 +19,13 @@ vim.opt.shiftwidth = 4
 
 vim.opt.clipboard = "unnamedplus"
 
+vim.opt.signcolumn = "yes"
+vim.opt.hlsearch = true
+
 -- vim.opt.scrolloff = 999
 
 -- for virtual mode
-vim.opt.virtualedit = "block"
+-- vim.opt.virtualedit = false
 
 vim.opt.inccommand = "split"
 

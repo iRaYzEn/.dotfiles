@@ -1,7 +1,7 @@
 return {
     "rose-pine/neovim",
     -- "morhetz/gruvbox",
-    as = "rose-pine",
+    name = "rose-pine",
     config = function()
         disable_background = true
 

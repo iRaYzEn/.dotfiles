@@ -11,7 +11,7 @@ autoload -U colors && colors
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="alanpeabody"
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -147,9 +147,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# if [ -x /usr/games/cowsay -a -x /usr/games/fortune ]; then
-#     fortune | neofetch
-# fi
+
+# !!!! install fortune first !!!!
+if [ -x /usr/games/cowsay -a -x /usr/games/fortune ]; then
+    fortune | neofetch
+fi
 
 #php
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"

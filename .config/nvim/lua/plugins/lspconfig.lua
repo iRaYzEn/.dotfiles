@@ -8,11 +8,11 @@ return { -- LSP Configuration & Plugins
 
         -- Useful status updates for LSP.
         -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-        { 'j-hui/fidget.nvim', opts = {} },
+        { 'j-hui/fidget.nvim',       opts = {} },
 
         -- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
         -- used for completion, annotations and signatures of Neovim apis
-        { 'folke/neodev.nvim', opts = {} },
+        { 'folke/neodev.nvim',       opts = {} },
     },
     config = function()
         -- Brief aside: **What is LSP?**
@@ -155,7 +155,7 @@ return { -- LSP Configuration & Plugins
         --  - settings (table): Override the default settings passed when initializing the server.
         --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
         local servers = {
-            -- clangd = {},
+            clangd = {},
             -- gopls = {},
             -- pyright = {},
             -- rust_analyzer = {},
@@ -167,6 +167,31 @@ return { -- LSP Configuration & Plugins
             -- But for many setups, the LSP (`tsserver`) will work just fine
             tsserver = {},
             --
+            emmet_language_server = {
+                filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact" },
+                -- Read more about this options in the [vscode docs](https://code.visualstudio.com/docs/editor/emmet#_emmet-configuration).
+                -- **Note:** only the options listed in the table are supported.
+                init_options = {
+                    ---@type table<string, string>
+                    includeLanguages = {},
+                    --- @type string[]
+                    excludeLanguages = {},
+                    --- @type string[]
+                    extensionsPath = {},
+                    --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/preferences/)
+                    preferences = {},
+                    --- @type boolean Defaults to `true`
+                    showAbbreviationSuggestions = true,
+                    --- @type "always" | "never" Defaults to `"always"`
+                    showExpandedAbbreviation = "always",
+                    --- @type boolean Defaults to `false`
+                    showSuggestionsAsSnippets = false,
+                    --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/syntax-profiles/)
+                    syntaxProfiles = {},
+                    --- @type table<string, string> [Emmet Docs](https://docs.emmet.io/customization/snippets/#variables)
+                    variables = {},
+                },
+            },
 
             lua_ls = {
                 -- cmd = {...},
@@ -214,4 +239,3 @@ return { -- LSP Configuration & Plugins
         }
     end,
 }
-

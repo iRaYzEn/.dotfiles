@@ -1,6 +1,5 @@
 vim.g.mapleader = " "
 vim.keymap.set("i", "jk", "<Esc>")
-vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>")
 
 vim.keymap.set("n", "<leader>o", ":Oil<CR>")
 -- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)

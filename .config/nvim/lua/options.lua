@@ -20,7 +20,7 @@ vim.opt.shiftwidth = 4
 vim.opt.clipboard = "unnamedplus"
 
 vim.opt.signcolumn = "yes"
-vim.opt.hlsearch = true
+vim.opt.hlsearch = false
 
 -- vim.opt.scrolloff = 999
 
@@ -32,3 +32,4 @@ vim.opt.inccommand = "split"
 vim.opt.ignorecase = true
 
 vim.opt.termguicolors = true
+

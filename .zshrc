@@ -137,8 +137,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source /home/rayzen/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 bindkey -s ^f 'tmux-sessionizer\n'
 #vim
 export PATH="$PATH:/opt/nvim-linux64/bin"
@@ -155,10 +153,15 @@ fi
 
 #php
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
-
+#python
+alias python="python3.12"
+#golang
+export PATH=$PATH:/usr/local/go/bin
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [[ -s $BASE16_SHELL/profile_helper.sh ]] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 source ~/.config/base16-shell/scripts/base16-rose-pine.sh
+
+export PASSWORD_STORE_GIT=true

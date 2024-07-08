@@ -13,4 +13,10 @@ return {
             vim.keymap.set({ "n", "v" }, '<leader>xe', require('nvim-emmet').wrap_with_abbreviation)
         end,
     },
+    {
+        'brenoprata10/nvim-highlight-colors'
+    },
+    {
+        'ThePrimeagen/vim-be-good'
+    },
 }

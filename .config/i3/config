@@ -169,7 +169,7 @@ bar {
         tray_output primary
         font pango:DejaVu Sans Mono 14
         separator_symbol ":|:"
-        position top
+        # position top
         colors {
             # statusline #0F0A01  
             # statusline #ceecee  
@@ -191,6 +191,8 @@ bindsym $mod+s exec spotify
 bindsym $mod+b exec brave-browser
 bindsym $mod+n exec nitrogen
 bindsym $mod+o exec obsidian
+bindsym $mod+p exec passmenu
+
 
 # Suspend
 bindsym $mod+shift+x exec i3lock

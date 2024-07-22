@@ -1,8 +1,9 @@
 vim.g.mapleader = " "
+vim.opt.guicursor = ""
 
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.numberwidth = 2
+vim.opt.numberwidth = 5
 
 vim.opt.splitbelow = true
 vim.opt.splitright = true
@@ -19,13 +20,16 @@ vim.opt.shiftwidth = 4
 
 vim.opt.clipboard = "unnamedplus"
 
-vim.opt.signcolumn = "yes"
+-- vim.opt.signcolumn = "yes"
 vim.opt.hlsearch = false
+vim.opt.incsearch = true
 
--- vim.opt.scrolloff = 999
 
 -- for virtual mode
 -- vim.opt.virtualedit = false
+
+vim.scrolloff = 8
+vim.opt.updatetime = 50
 
 vim.opt.inccommand = "split"
 

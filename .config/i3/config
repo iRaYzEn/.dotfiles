@@ -17,7 +17,7 @@ set $mod Mod4
 # GET DEM BORDERS OUT OF HEREc:w
 #
 # Thanks Childz
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
                           # class                 border  backgr. text    indicator child_border
 for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
 
@@ -167,7 +167,7 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status 
         tray_output primary
-        font pango:DejaVu Sans Mono 14
+        font pango:DejaVu Sans Mono 12
         separator_symbol ":|:"
         # position top
         colors {

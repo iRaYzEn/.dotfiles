@@ -29,4 +29,14 @@ return {
             -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         }
     },
+    -- colorschemes
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+    { "savq/melange-nvim" },
+    { "catppuccin/nvim",  name = "catppuccin", priority = 1000},
+    -- end colorschemes
 }

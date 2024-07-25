@@ -136,6 +136,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vim="nvim"
 
 bindkey -s ^f 'tmux-sessionizer\n'
 #vim
@@ -147,9 +148,8 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # !!!! install fortune first !!!!
-if [ -x /usr/games/cowsay -a -x /usr/games/fortune ]; then
-    fortune | neofetch
-fi
+# if [ -x /usr/games/cowsay -a -x /usr/games/fortune ]; then
+# fi
 
 #php
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
@@ -158,10 +158,6 @@ alias python="python3.12"
 #golang
 export PATH=$PATH:/usr/local/go/bin
 
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[[ -s $BASE16_SHELL/profile_helper.sh ]] && eval "$($BASE16_SHELL/profile_helper.sh)"
-
-source ~/.config/base16-shell/scripts/base16-rose-pine.sh
-
 export PASSWORD_STORE_GIT=true
+
+export PATH=$PATH:~/go/bin

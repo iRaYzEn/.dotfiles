@@ -158,7 +158,14 @@ export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 alias python="python3.12"
 #golang
 export PATH=$PATH:/usr/local/go/bin
+<<<<<<< HEAD
 export PATH=$PATH:~/go/bin
 
 export PASSWORD_STORE_GIT=true
 
+=======
+
+export PASSWORD_STORE_GIT=true
+
+export PATH=$PATH:~/go/bin
+>>>>>>> 9ece574646a87c1f691bd1d4b7310b9c31854a03

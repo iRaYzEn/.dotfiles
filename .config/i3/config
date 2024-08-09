@@ -168,7 +168,7 @@ bar {
         status_command i3status 
         tray_output primary
         font pango:DejaVu Sans Mono 12
-        separator_symbol ":|:"
+        separator_symbol " | "
         # position top
         colors {
             # statusline #0F0A01  
@@ -193,9 +193,14 @@ bindsym $mod+n exec nitrogen
 bindsym $mod+o exec obsidian
 bindsym $mod+p exec passmenu
 
+bindsym $mod+a exec dmenu 
 
 # Suspend
 bindsym $mod+shift+x exec i3lock
 
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton
+
+# Set default keyboard layout to English (us) and Arabic (ar)
+exec_always --no-startup-id setxkbmap -layout us,ar -option 'grp:alt_shift_toggle'
+

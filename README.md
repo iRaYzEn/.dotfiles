@@ -44,4 +44,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
  - zsh-autocomplete plugin
 	
 	`git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete`
-	
+
+
+- pavucontrol is a good audio manager
+- shutter is a good screenshot program
+- newsbout rss feed
+- 

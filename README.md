@@ -23,6 +23,8 @@ for zsh && ohmyzsh
 sudo apt install zsh-autosuggestions zsh-syntax-highlighting zsh
 ```
 
+put this command in the terminal : /usr/bin/zsh
+
 ## Install Oh my ZSH.
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

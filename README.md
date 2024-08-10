@@ -51,4 +51,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 - pavucontrol is a good audio manager
 - shutter is a good screenshot program
 - newsbout rss feed
-- 
+- git-credential-manager for github (no more tokens):
+https://github.com/git-ecosystem/git-credential-manager/releases/tag/v2.5.1
+
+sudo dpkg -i <path-to-package>
+git-credential-manager configure
+git config --global credential.credentialStore gpg

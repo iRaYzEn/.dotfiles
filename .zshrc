@@ -140,12 +140,13 @@ alias vim="nvim"
 
 bindkey -s ^f 'tmux-sessionizer\n'
 bindkey -s ^p '/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1\n'
+bindkey -s ^g 'xrandr --output HDMI-0 --mode 1920x1080 --rate 165\n'
 
 #vim
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 
 # !!!! install fortune first !!!!
@@ -158,8 +159,11 @@ export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 #python
 alias python="python3.12"
 #golang
+
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:~/go/bin
 
 export PASSWORD_STORE_GIT=true
 
+
+# Created by `pipx` on 2024-08-12 11:39:13
+export PATH="$PATH:/home/rayzen/.local/bin"

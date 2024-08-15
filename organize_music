@@ -1,0 +1,32 @@
+#!/bin/bash
+
+if [ -z "$1" ];then
+    echo "give file name"
+    exit 0
+fi
+
+# Directory containing your music files
+MUSIC_DIR="/home/rayzen/Music/$1/"
+
+# Change to the music directory
+cd "$MUSIC_DIR" || exit
+
+# Loop over each file in the music directory
+find . -type f -name "*.mp3" -or -name "*.flac" | while IFS= read -r file; do
+    # Extract the album name using the 'ffprobe' command
+    album=$(ffprobe -v error -show_entries format_tags=album -of default=noprint_wrappers=1:nokey=1 "$file")
+
+    # Check if album name is not empty
+    if [ -n "$album" ]; then
+        # Create a directory for the album if it doesn't exist
+        mkdir -p "$album"
+
+        # Move the file to the album directory
+        mv "$file" "$album/"
+
+        # Extract album artwork if it doesn't already exist in the folder
+        if [ ! -f "$album/cover.jpg" ]; then
+            ffmpeg -i "$album/$(basename "$file")" -an -vcodec copy "$album/cover.jpg" 2>/dev/null
+        fi        
+    fi
+done

@@ -140,14 +140,22 @@ alias vim="nvim"
 
 bindkey -s ^f 'tmux-sessionizer\n'
 bindkey -s ^p '/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1\n'
+<<<<<<< HEAD
 bindkey -s ^g 'xrandr --output HDMI-0 --mode 1920x1080 --rate 165\n'
 bindkey -s ^4 'xrandr --output HDMI-0 --scale 0.75x1\n'
+=======
+>>>>>>> 8cc4603290e555adf1ec33c07da52dc88521b215
 
 #vim
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
+<<<<<<< HEAD
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+=======
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+>>>>>>> 8cc4603290e555adf1ec33c07da52dc88521b215
 
 
 # !!!! install fortune first !!!!

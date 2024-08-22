@@ -12,29 +12,15 @@ read -p "COPYING (F:FROM/T:TO) IPOD: " copying
 
 # Determine the source or destination based on user input
 if [[ "$copying" = "f" || "$copying" = "F" ]]; then
-    statement="/mnt/ipod/"
+    sudo mv /mnt/ipod/Music/ /home/rayzen/Music/
 elif [[ "$copying" = "t" || "$copying" = "T" ]]; then 
-    statement="/home/rayzen/Music/"
+    sudo mv /home/rayzen/Music/ /mnt/ipod/Music/
 else
     echo "Invalid copying direction selected."
     sudo umount /mnt/ipod/
     exit 1
 fi
 
-echo "$statement"
 
-read -p "Which file to copy (M: Music Playlists, P: Podcast, A: All): " files
-
-if [[ "$files" = "M" || "$files" = "m" ]]; then
-    cp -r "${statement}Music Playlists/" /home/rayzen/Music/
-elif [[ "$files" = "P" || "$files" = "p" ]]; then
-    cp -r "${statement}podcast" /home/rayzen/Music/
-elif [[ "$files" = "A" || "$files" = "a" ]]; then
-    cp -r "${statement}*" /home/rayzen/Music/
-else
-    echo "Invalid option selected."
-    sudo umount /mnt/ipod/
-    exit 1
-fi
 
 sudo umount /mnt/ipod/

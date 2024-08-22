@@ -190,8 +190,8 @@ bindsym $mod+s exec spotify
 bindsym $mod+b exec brave-browser
 bindsym $mod+n exec nitrogen
 bindsym $mod+o exec obsidian
-bindsym $mod+p exec passmenu
 bindsym $mod+shift+d exec discord
+bindsym $mod+shift+s exec steam
 
 bindsym $mod+a exec dmenu 
 

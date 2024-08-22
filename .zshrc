@@ -1,4 +1,4 @@
-# If you come from bash you might have to change your $PATH.
+﻿# If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -141,6 +141,7 @@ alias vim="nvim"
 bindkey -s ^f 'tmux-sessionizer\n'
 bindkey -s ^p '/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1\n'
 bindkey -s ^g 'xrandr --output HDMI-0 --mode 1920x1080 --rate 165\n'
+bindkey -s ^4 'xrandr --output HDMI-0 --scale 0.75x1\n'
 
 #vim
 export PATH="$PATH:/opt/nvim-linux64/bin"
@@ -159,7 +160,6 @@ export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 #python
 alias python="python3.12"
 #golang
-
 export PATH=$PATH:/usr/local/go/bin
 
 export PASSWORD_STORE_GIT=true

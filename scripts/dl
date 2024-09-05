@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ -z "$1" ||  -z "$2" ]]; then
+    echo "'folder name' 'spotify link'"
+    exit 1
+fi
+
+mkdir /home/rayzen/Music/$1 
+cd /home/rayzen/Music/$1
+spotdl --format flac "$2" --output "{artist} - {title} - {album}.{output-ext}"

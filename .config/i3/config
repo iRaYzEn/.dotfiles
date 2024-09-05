@@ -200,6 +200,7 @@ bindsym $mod+shift+x exec i3lock
 
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton
+exec --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --rate 165  
 
 # Set default keyboard layout to English (us) and Arabic (ar)
 exec_always --no-startup-id setxkbmap -layout us,ara -option 'grp:alt_shift_toggle'

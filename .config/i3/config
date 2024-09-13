@@ -63,16 +63,17 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus left 
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+
+bindsym $mod+shift+h move left
+bindsym $mod+shift+j move down
+bindsym $mod+shift+k move up
+bindsym $mod+shift+l move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+shift+Left move left
+bindsym $mod+shift+Down move down
+bindsym $mod+shift+Up move up
+bindsym $mod+shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+z split h
@@ -192,8 +193,7 @@ bindsym $mod+n exec nitrogen
 bindsym $mod+o exec obsidian
 bindsym $mod+shift+d exec discord
 bindsym $mod+shift+s exec steam
-
-bindsym $mod+a exec dmenu 
+bindsym $mod+shift+p exec poweroff
 
 # Suspend
 bindsym $mod+shift+x exec i3lock

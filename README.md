@@ -11,7 +11,7 @@ then source packer & PackerInstall
 for nvim:
 you don't have to do anything
 4. install compton => sudo apt install compton
-5. isntall tmux => sudo apt install tmux
+5. install tmux => sudo apt install tmux
 
 for zsh && ohmyzsh
 

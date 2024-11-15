@@ -3,6 +3,10 @@ return {
         'ryanoasis/vim-devicons'
     },
     {
+        "christoomey/vim-tmux-navigator",
+        lazy = false,
+    },
+    {
         'folke/todo-comments.nvim',
         dependencies = { 'nvim-lua/plenary.nvim' },
         opts = { signs = false }

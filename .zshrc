@@ -1,10 +1,8 @@
-﻿# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+﻿# export PATH=$HOME/bin:/sur/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-autoload -U colors && colors
 # PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 # Set name of the theme to load --- if set to "random", it will
@@ -108,7 +106,6 @@ bindkey -s '^o' 'lfcd\n'
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions vi-mode)
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -140,22 +137,12 @@ alias vim="nvim"
 
 bindkey -s ^f 'tmux-sessionizer\n'
 bindkey -s ^p '/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1\n'
-<<<<<<< HEAD
-bindkey -s ^g 'xrandr --output HDMI-0 --mode 1920x1080 --rate 165\n'
-bindkey -s ^4 'xrandr --output HDMI-0 --scale 0.75x1\n'
-=======
->>>>>>> 8cc4603290e555adf1ec33c07da52dc88521b215
 
 #vim
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
-<<<<<<< HEAD
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-=======
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
->>>>>>> 8cc4603290e555adf1ec33c07da52dc88521b215
 
 
 # !!!! install fortune first !!!!

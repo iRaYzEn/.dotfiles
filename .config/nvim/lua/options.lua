@@ -36,3 +36,4 @@ vim.opt.inccommand = "split"
 vim.opt.ignorecase = true
 
 vim.opt.termguicolors = true
+vim.opt.colorcolumn = "80"

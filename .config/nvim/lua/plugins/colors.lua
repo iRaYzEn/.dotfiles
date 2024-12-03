@@ -1,14 +1,14 @@
 return {
-    -- "rose-pine/neovim",
+    "rose-pine/neovim",
     -- "morhetz/gruvbox",
     -- "catppuccin/nvim",
-    "folke/tokyonight.nvim",
+    -- "folke/tokyonight.nvim",
     config = function()
 
         function ColorMyPencils(color)
-            -- color = color or "rose-pine-main"
+            color = color or "rose-pine-main"
             -- color = color or "gruvbox"
-            color = color or "tokyonight"
+            -- color = color or "tokyonight"
             -- color = color or "catppuccin"
             vim.cmd.colorscheme(color)
             vim.api.nvim_set_hl(0, "Normal", { bg = "none" })

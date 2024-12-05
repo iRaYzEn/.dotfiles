@@ -15,19 +15,17 @@ general {
     # output_format = "i3bar"
 }
 
+order += "battery all"
 order += "disk /"
 order += "memory"
 order += "volume master"
 order += "load"
 order += "tztime local"
-# enable it if you have laptob
-# order += "battery all"
 
 
-# enable it if you have laptob
-# battery all {
-#         format = "%status %percentage %remaining"
-# }
+battery all {
+        format = "%status %percentage %remaining"
+}
 
 tztime local {
         # format = "<span foreground='#ff0000'>time:</span> %time"

@@ -105,7 +105,7 @@ bindkey -s '^o' 'lfcd\n'
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-vi-mode)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -162,3 +162,4 @@ export PASSWORD_STORE_GIT=true
 
 # Created by `pipx` on 2024-08-12 11:39:13
 export PATH="$PATH:/home/rayzen/.local/bin"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

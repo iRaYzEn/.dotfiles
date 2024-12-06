@@ -105,7 +105,7 @@ bindkey -s '^o' 'lfcd\n'
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions vi-mode)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration

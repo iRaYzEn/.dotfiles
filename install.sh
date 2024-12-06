@@ -20,9 +20,9 @@ sudo apt install -y \
     ripgrep \
     unzip \
     git \
+    pass \
+    compton \
     xclip
-
-    git
 
 echo "Adding Brave Browser repository and key..."
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg

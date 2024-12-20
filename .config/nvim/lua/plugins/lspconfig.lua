@@ -168,7 +168,6 @@ return { -- LSP Configuration & Plugins
             --    https://github.com/pmizio/typescript-tools.nvim
             --
             -- But for many setups, the LSP (`tsserver`) will work just fine
-            tsserver = {},
             --
             emmet_language_server = {
                 filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact" },

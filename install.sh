@@ -5,7 +5,10 @@ sudo apt update
 sudo apt install -y stow 
 stow .
 
+
+
 sudo apt install -y \
+    libstdc++-12-dev \
     tmux \
     fzf \
     i3 \

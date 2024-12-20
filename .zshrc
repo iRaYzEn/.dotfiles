@@ -107,6 +107,8 @@ alias vim="nvim"
 # bindkey
 bindkey -s ^f 'tmux-sessionizer\n'
 bindkey -s ^p '/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1\n'
+bindkey -s ^o 'xrandr --output eDP-1 --off --output DP-2 --auto\n'
+bindkey -s ^n 'xrandr  --output DP-2 --off --output eDP-1 --auto\n'
 
 #vim
 export PATH="$PATH:/opt/nvim-linux64/bin"

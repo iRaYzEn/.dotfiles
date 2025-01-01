@@ -1,6 +1,7 @@
 return { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
+        'saghen/blink.cmp',
         -- Automatically install LSPs and related tools to stdpath for Neovim
         { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
         'williamboman/mason-lspconfig.nvim',
@@ -198,7 +199,7 @@ return { -- LSP Configuration & Plugins
             lua_ls = {
                 -- cmd = {...},
                 -- filetypes = { ...},
-                -- capabilities = {},
+                capabilities = { capabilities },
                 settings = {
                     Lua = {
                         completion = {

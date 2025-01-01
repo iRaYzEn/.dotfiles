@@ -134,3 +134,6 @@ export PASSWORD_STORE_GIT=true
 # Created by `pipx` on 2024-08-12 11:39:13
 export PATH="$PATH:/home/rayzen/.local/bin"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$PATH:$HOME/zig-64-0.14.0"
+export PATH="$PATH:$HOME/bin"

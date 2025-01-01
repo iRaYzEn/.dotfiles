@@ -9,6 +9,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
+# set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. font pango:monospace 15px
@@ -123,8 +124,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 ## gaps
 
-# gaps inner 12
-# gaps outer 2
+gaps inner 16
+gaps outer 2
 
 # set $fm eDP-1
 # set $sm HDMI-1
@@ -188,6 +189,9 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 bindsym $mod+s exec spotify
+bindsym $mod+ctrl+p exec mon pc
+bindsym $mod+ctrl+l exec mon lap
+bindsym $mod+shift+d exec discord
 bindsym $mod+b exec brave-browser
 bindsym $mod+n exec nitrogen
 bindsym $mod+o exec obsidian
@@ -198,14 +202,12 @@ bindsym $mod+shift+x exec i3lock
 
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton
+exec --no-startup-id brave-browser
+# change the layout of the lap keyboard
+exec key lap 
 
 # Set default keyboard layout to English (us) and Arabic (ar)
-# exec_always --no-startup-id setxkbmap -layout us,ara -option 'grp:ctrl_shift_toggle'
-
-exec --no-startup-id nm-applet
-
-bindsym $mod+Shift+s exec --no-startup-id ~/dotfiles/bin/monitor
-bindsym $mod+Shift+n exec --no-startup-id ~/dotfiles/bin/resolution
+exec_always --no-startup-id setxkbmap -layout us,ara -option 'grp:alt_space_toggle'
 
 # FKeys
 # Pulse Audio controls
@@ -217,8 +219,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
-# Alsa audio controls.
-bindsym $mod+Shift+comma exec ~/.config/i3/scripts/alsa restore
-bindsym $mod+semicolon exec ~/.config/i3/scripts/alsa down Headphone
-bindsym $mod+comma exec ~/.config/i3/scripts/alsa up Headphone
-bindsym $mod+m move workspace to output left
+
+assign [class="(?i)brave-browser"] 2
+assign [class="(?i)obsidian"] 1
+assign [class="(?i)spotify"] 8
+assign [class="(?i)discord"] 10

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ $1 = "lap" ]; then
+    setxkbmap -option "caps:swapescape" 
+    setxkbmap -option ctrl:swap_lwin_lctl
+    elif [ $1 = "pc" ]; then 
+        setxkbmap -option
+fi

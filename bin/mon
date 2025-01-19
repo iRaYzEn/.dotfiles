@@ -2,7 +2,7 @@
 
 if [ $1 == "lap" ]; then
     xrandr  --output DP-2 --off --output eDP-1 --auto
-    kep lap
+    key lap
 elif [ $1 == "pc" ]; then 
     xrandr --output eDP-1 --off --output DP-2 --auto
     xrandr --rate 165

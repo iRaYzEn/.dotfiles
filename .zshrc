@@ -137,3 +137,11 @@ export PATH="$PATH:/home/rayzen/.local/bin"
 
 export PATH="$PATH:$HOME/zig-64-0.14.0"
 export PATH="$PATH:$HOME/bin"
+
+# pnpm
+export PNPM_HOME="/home/rayzen/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

@@ -195,6 +195,7 @@ bindsym $mod+shift+d exec discord
 bindsym $mod+b exec brave-browser
 bindsym $mod+n exec nitrogen
 bindsym $mod+o exec obsidian
+bindsym $mod+shift+f exec figma-linux
 bindsym $mod+shift+p exec poweroff
 
 # Suspend
@@ -207,7 +208,7 @@ exec --no-startup-id brave-browser
 exec key lap 
 
 # Set default keyboard layout to English (us) and Arabic (ar)
-exec_always setxkbmap -layout us,ara -option 'grp:alt_space_toggle'
+exec_always --no-startup-id setxkbmap -layout us,ara -option 'grp:alt_space_toggle'
 
 # FKeys
 # Pulse Audio controls
@@ -224,3 +225,4 @@ assign [class="(?i)brave-browser"] 2
 assign [class="(?i)obsidian"] 1
 assign [class="(?i)spotify"] 8
 assign [class="(?i)discord"] 10
+assign [class="(?i)figma-linux"] 4

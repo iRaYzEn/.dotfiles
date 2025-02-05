@@ -1,9 +1,10 @@
-background = #2a251b
+# background = #2a251b
+background = #282A36
 #foreground = #ffffff
 font-family = "Jetbrains Mono"
 cursor-style-blink = false
 mouse-hide-while-typing = true
-background-opacity = .8
+# background-opacity = .8
 auto-update = download
 gtk-titlebar = false
 font-size = 17

@@ -1,13 +1,13 @@
 return {
-    "rose-pine/neovim",
-    -- "morhetz/gruvbox",
+    -- "rose-pine/neovim",
+    "morhetz/gruvbox",
     -- "catppuccin/nvim",
     -- "folke/tokyonight.nvim",
     config = function()
 
         function ColorMyPencils(color)
-            color = color or "rose-pine-main"
-            -- color = color or "gruvbox"
+            -- color = color or "rose-pine-main"
+            color = color or "gruvbox"
             -- color = color or "tokyonight"
             -- color = color or "catppuccin"
             vim.cmd.colorscheme(color)

@@ -1,12 +1,13 @@
 # background = #2a251b
+# background = #333333
 background = #282A36
-#foreground = #ffffff
+# foreground = #ffffff
 font-family = "Jetbrains Mono"
 cursor-style-blink = false
 mouse-hide-while-typing = true
-# background-opacity = .8
+background-opacity = .95
 auto-update = download
 gtk-titlebar = false
-font-size = 17
+font-size = 16
 #theme = catppuccin-frappe
 theme = groovy

@@ -103,6 +103,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
+alias news="newsboat"
+
 
 # bindkey
 bindkey -s ^f 'tmux-sessionizer\n'
@@ -135,8 +137,8 @@ export PASSWORD_STORE_GIT=true
 export PATH="$PATH:/home/rayzen/.local/bin"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH="$PATH:$HOME/zig-64-0.14.0"
 export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/zig-64-0.14.0"
 
 # pnpm
 export PNPM_HOME="/home/rayzen/.local/share/pnpm"
@@ -145,3 +147,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+#
+# echo hello world

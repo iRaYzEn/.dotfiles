@@ -110,6 +110,7 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
@@ -205,7 +206,7 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton
 exec --no-startup-id brave-browser
 # change the layout of the lap keyboard
-exec key lap 
+exec key pc 
 
 # Set default keyboard layout to English (us) and Arabic (ar)
 exec_always --no-startup-id setxkbmap -layout us,ara -option 'grp:alt_space_toggle'
@@ -226,3 +227,6 @@ assign [class="(?i)obsidian"] 1
 assign [class="(?i)spotify"] 8
 assign [class="(?i)discord"] 10
 assign [class="(?i)figma-linux"] 4
+
+set $lap eDP-1
+set $mon DP-2

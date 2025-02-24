@@ -7,16 +7,28 @@ reload-threads 4
 #download-timeout 10
 prepopulate-query-feeds yes
 
-
 # -- display -------------------------------------------------------------------
 
-show-read-feeds no
-feed-sort-order unreadarticlecount-asc
+# show-read-feeds no
+# feed-sort-order unreadarticlecount-asc
 
-color info default default reverse
-color listnormal_unread yellow default
-color listfocus blue default reverse bold
-color listfocus_unread blue default reverse bold
+color listnormal cyan default
+color listfocus black yellow standout bold
+color listnormal_unread blue default
+color listfocus_unread yellow default bold
+color info red black bold
+color article cyan default
+
+highlight article "^Feed:.*" color5 color0
+highlight article "^Title:.*" color3 color0 bold
+highlight article "^Author:.*" color2 color0
+highlight article "^Date:.*" color223 color0
+highlight article "^Link:.*" color4 color0
+highlight article "^Flags:.*" color9 color0
+highlight article "\\[[0-9][0-9]*\\]" color66 default bold
+highlight article "\\[image [0-9][0-9]*\\]" color109 default bold
+highlight article "\\[embedded flash: [0-9][0-9]*\\]" color66 default bold
+
 
 text-width 80
 
@@ -24,7 +36,7 @@ text-width 80
 # -- navigation ----------------------------------------------------------------
 
 goto-next-feed no
-
+prepopulate-query-feeds yes
 browser "open -g -a 'brave-browser' %u"
 
 bind-key j down feedlist
@@ -35,6 +47,11 @@ bind-key J next-feed articlelist
 bind-key K prev-feed articlelist
 bind-key j down article
 bind-key k up article
+bind-key G end
+bind-key g home
+bind-key l open
+bind-key h quit
+bind-key U show-urls
 
 
 # -- bookmarks -----------------------------------------------------------------
@@ -49,3 +66,19 @@ bind-key k up article
 #unbind-key C feedlist
 #confirm-exit no
 #cleanup-on-quit no
+#
+#
+#
+
+browser brave-browser
+macro , open-in-browser
+macro t set browser "qndl" ; open-in-browser ; set browser brave-browser
+macro a set browser "tsp yt-dlp --embed-metadata -xic -f bestaudio/best --restrict-filenames" ; open-in-browser ; set browser brave-browser
+macro v set browser "setsid -f mpv" ; open-in-browser ; set browser brave-browser
+macro w set browser "lynx" ; open-in-browser ; set browser brave-browser
+macro d set browser "dmenuhandler" ; open-in-browser ; set browser brave-browser
+macro c set browser "echo %u | xclip -r -sel c" ; open-in-browser ; set browser brave-browser
+macro C set browser "youtube-viewer --comments=%u" ; open-in-browser ; set browser brave-browser
+macro p set browser "peertubetorrent %u 480" ; open-in-browser ; set browser brave-browser
+macro P set browser "peertubetorrent %u 1080" ; open-in-browser ; set browser brave-browser
+

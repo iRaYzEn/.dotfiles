@@ -206,7 +206,7 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton
 exec --no-startup-id brave-browser
 # change the layout of the lap keyboard
-exec key pc 
+exec key lap
 
 # Set default keyboard layout to English (us) and Arabic (ar)
 exec_always --no-startup-id setxkbmap -layout us,ara -option 'grp:alt_space_toggle'

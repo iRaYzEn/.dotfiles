@@ -125,8 +125,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 ## gaps
 
-gaps inner 16
-gaps outer 2
+# gaps inner 16
+# gaps outer 2
 
 # set $fm eDP-1
 # set $sm HDMI-1
@@ -228,5 +228,6 @@ assign [class="(?i)spotify"] 8
 assign [class="(?i)discord"] 10
 assign [class="(?i)figma-linux"] 4
 
-set $lap eDP-1
-set $mon DP-2
+set $pc_monitor DP-3
+workspace 8 output $pc_monitor
+workspace 10 output $pc_monitor

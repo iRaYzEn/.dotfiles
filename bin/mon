@@ -5,4 +5,5 @@ if [ $1 == "lap" ]; then
     key lap
 elif [ $1 == "pc" ]; then 
     xrandr --auto; xrandr --output eDP-1 --off; xrandr --rate 165
+    key lap
 fi

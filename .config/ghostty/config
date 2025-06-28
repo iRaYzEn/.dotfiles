@@ -9,10 +9,12 @@ mouse-hide-while-typing = true
 background-opacity = .70
 auto-update = download
 gtk-titlebar = false
-font-size = 16
-theme = Fahrenheit
+font-size = 13
+theme = GruvboxDarkHard
 # theme = groovy
 confirm-close-surface = false
 
 # for sicp
-clipboard-paste-protection = false
+# clipboard-paste-protection = false
+
+shell-integration = zsh

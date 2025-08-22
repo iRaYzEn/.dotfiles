@@ -1,17 +1,20 @@
 # background = #2a251b
+# background = #0c0c0c
+background = #1c1c1c
 # background = #333333
-background = #000000
+# background = #000000
 # background = #282A36
 # foreground = #ffffff
 font-family = "Jetbrains Mono"
 cursor-style-blink = false
 mouse-hide-while-typing = true
-background-opacity = .70
+background-opacity = .95
 auto-update = download
 gtk-titlebar = false
 font-size = 13
-theme = GruvboxDarkHard
-# theme = groovy
+# theme = rose-pine-moon
+# theme = miasma
+theme = catppuccin-frappe
 confirm-close-surface = false
 
 # for sicp

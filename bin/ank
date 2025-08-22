@@ -1,0 +1,39 @@
+#!/usr/bin/sh 
+
+# CONSTANTS
+deck_name="English"
+card_type_name="basic"
+anki_server="http://localhost:8765/"
+
+front_part=$(dmenu -p "Word: " < /dev/null)
+front_part_escaped=$(printf '%s\n' "$front_part" | sed 's/"/\\"/g')
+# if either of them is empty, exit 
+if [ -z "$front_part_escaped" ]; then
+    exit 0
+fi
+
+back_part=$(dmenu -p "Definition: " < /dev/null)
+back_part_escaped=$(printf '%s\n' "$back_part" | sed 's/"/\\"/g')
+# if either of them is empty, exit 
+if [ -z "$back_part_escaped" ]; then
+    exit 0
+fi
+
+curl $anki_server -X POST -H 'Content-Type: application/json' \
+     -d '{
+         "action": "addNote",
+         "version": 6,
+         "params": {
+             "note": {
+                 "deckName": "'"$deck_name"'",
+                 "modelName": "'"$card_type_name"'",
+                 "fields": {
+                     "Front": "'"$front_part_escaped"'",
+                     "Back": "'"$back_part_escaped"'"
+                 },
+                 "options": {
+                     "allowDuplicate": false
+                 }
+             }
+         }
+     }'

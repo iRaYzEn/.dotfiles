@@ -81,4 +81,3 @@ macro c set browser "echo %u | xclip -r -sel c" ; open-in-browser ; set browser 
 macro C set browser "youtube-viewer --comments=%u" ; open-in-browser ; set browser brave-browser
 macro p set browser "peertubetorrent %u 480" ; open-in-browser ; set browser brave-browser
 macro P set browser "peertubetorrent %u 1080" ; open-in-browser ; set browser brave-browser
-

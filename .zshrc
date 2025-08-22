@@ -22,6 +22,8 @@ alias python="python3.12"
 alias fly="flyctl"
 alias vim="nvim"
 alias news="newsboat"
+# alias vpnoff="sudo wg-quick up wg0"
+# alias vpnon="sudo wg-quick down wg0"
 
 
 # ### exports ###
@@ -49,6 +51,13 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# fnm
+FNM_PATH="/home/rayzen/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/rayzen/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
 
 # fnm
 FNM_PATH="/home/rayzen/.local/share/fnm"

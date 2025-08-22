@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# if [[ $1 -eq "all" ]]; then
+#     bash $HOME/.dotfiles/build/nvim.sh
+# fi
+
+if [[ $1 -eq "nvim" ]]; then 
+    cd $HOME/neovim  && git pull
+    bash $HOME/.dotfiles/build/nvim.sh 
+fi

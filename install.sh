@@ -1,7 +1,8 @@
 #!/bin/bash
 
 
-bash ../bin/install_packages.sh
+sudo su
+bash $HOME/.dotfiles/bin/install_packages.sh
 
 sudo chsh -s $(which zsh)
 stow .

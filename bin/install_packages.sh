@@ -10,7 +10,7 @@ if [ -f $HOME/dl/git ];then
     cd $HOME/dl/git/ && git clone https://github.com/morganamilo/paru
     makepkg -si
 else
-    mkdir $HOME/dl/git
+    mkdir -p $HOME/dl/git
     cd $HOME/dl/git/ && git clone https://github.com/morganamilo/paru
-    cd $HOME/dl/git/paru/ && yes | makepkg -si
+    cd $HOME/dl/git/paru/ && yes | sudo makepkg -si
 fi

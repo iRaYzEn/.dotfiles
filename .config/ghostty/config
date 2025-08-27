@@ -7,8 +7,16 @@ background = #1c1c1c
 # foreground = #ffffff
 font-family = "Jetbrains Mono"
 cursor-style-blink = false
+cursor-style = block 
+shell-integration = zsh
+#Note that shell integration will automatically set the cursor to a bar at a
+#prompt, regardless of this configuration. You can disable that behavior by
+#specifying shell-integration-features = no-cursor or disabling shell
+#integration entirely. fuck this feature 2 hours of life wasted and second gessing whether i should change to urxvt
+shell-integration-features = no-cursor
 mouse-hide-while-typing = true
-background-opacity = .95
+background-opacity = .90
+# background-blur = 100
 auto-update = download
 gtk-titlebar = false
 font-size = 13
@@ -20,4 +28,3 @@ confirm-close-surface = false
 # for sicp
 # clipboard-paste-protection = false
 
-shell-integration = zsh

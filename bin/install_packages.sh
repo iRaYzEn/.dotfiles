@@ -1,18 +1,16 @@
 #!/bin/bash
 
-
-bash ../packages/repos.sh
-
-# apt packages
-xargs -a ../packages/apt.txt sudo apt install -y
+yes | sudo pacman -S $(cat $HOME/.dotfiles/software.txt)
 
 
-# installing npm & node
-curl -fsSL https://fnm.vercel.app/install | bash
-fnm install --lts
+# this thing is useful 
+#sudo ln -sf /usr/bin/ghostty /usr/bin/xterm
 
-# npm packages
-xargs -a ../packages/npm.txt npm install -g
-
-pip install -r ../packages/pip.txt
-
+if [ -f $HOME/dl/git ];then
+    cd $HOME/dl/git/ && git clone https://github.com/morganamilo/paru
+    makepkg -si
+else
+    mkdir $HOME/dl/git
+    cd $HOME/dl/git/ && git clone https://github.com/morganamilo/paru
+    cd $HOME/dl/git/paru/ && yes | makepkg -si
+fi

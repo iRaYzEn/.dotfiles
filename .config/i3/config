@@ -17,7 +17,7 @@ set $mod Mod1
 # GET DEM BORDERS OUT OF HEREc:w
 #
 # Thanks Childz
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
                           # class                 border  backgr. text    indicator child_border
 for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
 
@@ -39,7 +39,7 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec i3-sensible-terminal 
 
 bindsym $mod+q kill
 
@@ -171,11 +171,11 @@ bar {
         tray_output primary
         font pango:DejaVu Sans Mono 12
         separator_symbol " | "
-        # position top
+        position top
         colors {
             # statusline #0F0A01  
-            # statusline #ceecee  
-            # separator #fefefe
+            # statusline #CEECEE  
+            # separator #FEFEFE
         }
 }
 
@@ -193,23 +193,26 @@ bindsym $mod+s exec spotify
 bindsym $mod+ctrl+p exec mon pc
 bindsym $mod+ctrl+l exec mon lap
 bindsym $mod+shift+d exec discord
-bindsym $mod+b exec brave-browser
+bindsym $mod+b exec brave
 bindsym $mod+n exec nitrogen
 bindsym $mod+o exec obsidian
+bindsym $mod+a exec anki
 bindsym $mod+shift+f exec figma-linux
 bindsym $mod+shift+p exec poweroff
 
 # Suspend
-bindsym $mod+shift+x exec i3lock
+bindsym $mod+shift+x exec i3lock --color=000000
 
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id compton
-exec --no-startup-id brave-browser
-# change the layout of the lap keyboard
+exec --no-startup-id xcompmgr
+exec --no-startup-id brave
+# change the layout of the keyboard
 exec --no-startup-id key lap
+exec --no-startup-id mpd
 
 # Set default keyboard layout to English (us) and Arabic (ar)
 exec_always --no-startup-id setxkbmap -layout us,ara -option 'grp:alt_space_toggle'
+# bindsym $mod+space setxkbmap -layout us,ara -option 'grp:alt_space_toggle'
 
 # FKeys
 # Pulse Audio controls
@@ -227,8 +230,13 @@ assign [class="(?i)obsidian"] 1
 assign [class="(?i)spotify"] 8
 assign [class="(?i)discord"] 10
 assign [class="(?i)figma-linux"] 4
+assign [class="(?i)Anki"] 4
+assign [class="(?i)com.github.xournalpp.xournalpp"] 3
 
-set $pc_monitor DP-3
-workspace 8 output $pc_monitor
-workspace 10 output $pc_monitor
-default_orientation horizontal
+# mpc
+bindsym Mod4+plus exec mpc volume +5
+bindsym Mod4+minus exec mpc volume -5
+bindsym Mod4+n exec mpc next
+bindsym Mod4+p exec mpc prev
+bindsym Mod4+s exec mpc seek +5
+bindsym Mod4+space exec mpc toggle

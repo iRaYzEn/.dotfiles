@@ -7,4 +7,4 @@ while [ "$start" -ge `date +%s` ]; do
     printf '%s\r' "$(date -u -d "@$time" +%H:%M:%S)"
 done
 
-mpv --no-video --volume=80 ~/Music/clock.m4a
+mpv --no-video --volume=90 ~/media/music/albums/the_dark_side_of_the_moon/Pink\ Floyd\ -\ Time.mp3

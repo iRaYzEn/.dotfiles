@@ -5,3 +5,7 @@ fixzsh.txt
 build
 packages
 .git
+software.txt
+.gitignore
+.gitconfig
+changes.txt

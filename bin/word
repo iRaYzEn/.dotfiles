@@ -1,9 +1,18 @@
 #!/usr/bin/sh 
 
 # CONSTANTS
-deck_name="English"
 card_type_name="basic"
 anki_server="http://localhost:8765/"
+
+# choosing deck
+deck_name=$(curl -s "$anki_server" \
+  -X POST \
+  -d '{"action": "deckNames", "version": 6}' \
+  | jq -r '.result[] | select(. != "Default")' \
+  | dmenu -p "Deck:")
+
+
+[ -z "$deck_name" ] && exit 0
 
 front_part=$(dmenu -p "Word: " < /dev/null)
 front_part_escaped=$(printf '%s\n' "$front_part" | sed 's/"/\\"/g')

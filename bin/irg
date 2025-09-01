@@ -1,0 +1,44 @@
+#!/bin/sh
+# ipod ready gpt blob
+# Desired size
+SIZE="400x400"
+
+# Loop through .m4a files
+for f in *.m4a; do
+  [ -e "$f" ] || continue
+
+  echo "Processing: $f"
+
+  # Temporary files
+  cover="cover.jpg"
+  resized="cover_resized.jpg"
+  outfile=`printf "%s_new.m4a" "${f%.m4a}"`
+
+  # 1. Extract cover (if exists)
+  ffmpeg -y -i "$f" -an -vcodec copy "$cover" 2>/dev/null
+
+  if [ ! -f "$cover" ]; then
+    echo "  No cover found in $f, skipping."
+    continue
+  fi
+
+  # 2. Resize cover
+  convert "$cover" -resize "$SIZE" "$resized"
+
+  # 3. Re-attach resized cover
+  ffmpeg -i "$f" -i "$resized" \
+    -map 0:a -map 1 -c copy \
+    -disposition:v attached_pic \
+    "$outfile"
+
+  if [ $? -eq 0 ]; then
+    mv -f "$outfile" "$f"
+    echo "  ✅ Updated cover for $f"
+  else
+    echo "  ❌ Failed for $f"
+    rm -f "$outfile"
+  fi
+
+  # Clean up temp files
+  rm -f "$cover" "$resized"
+done

@@ -1,1 +1,1 @@
-discord flameshot xclip zsh stow tmux fzf i3-wm i3lock i3status i3blocks dmenu nitrogen curl  pavucontrol ripgrep unzip git pass xcompmgr  rust nodejs npm python-pip python3 neovim zsh-autosuggestions zsh-syntax-highlighting
+discord flameshot xclip zsh stow tmux fzf i3-wm i3lock i3status i3blocks dmenu nitrogen curl  pavucontrol ripgrep unzip git pass xcompmgr  rust nodejs npm python-pip python3 neovim zsh-autosuggestions zsh-syntax-highlighting python-pywal

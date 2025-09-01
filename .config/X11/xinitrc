@@ -1,2 +1,2 @@
-xrdb -merge ~/.Xresources &
+xrdb -merge ~/.config/X11/Xresources &
 exec i3

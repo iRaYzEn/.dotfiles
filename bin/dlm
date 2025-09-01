@@ -1,0 +1,16 @@
+#!/bin/sh
+
+treeGenre=$(ls $HOME/media/music/ | dmenu -l 10 -p "Parent Genre: ")
+mkdir -p $HOME/media/music/$treeGenre
+branchGenre=$(ls $HOME/media/music/$treeGenre | dmenu -l 10 -p "Child Genre: ")
+mkdir -p $HOME/media/music/$treeGenre/$branchGenre
+subGenre=$(ls $HOME/media/music/$treeGenre/$branchGenre | dmenu -l 10 -p "Sub Genre: ")
+mkdir -p $HOME/media/music/$treeGenre/$branchGenre/$subGenre
+
+
+while IFS= read -r line; do
+    cd $HOME/media/music/$treeGenre/$branchGenre/$subGenre
+    yt-dlp "$line"
+done < $1
+cd $HOME/media/music/$treeGenre/$branchGenre/$subGenre && irg
+

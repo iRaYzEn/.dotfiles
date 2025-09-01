@@ -1,5 +1,12 @@
 
 map D Delete
 
+cmd open ${{
+    case $(file --mine-type "$f" -bL) in
+        image/*|application/json) $EDITOR $"f";;
+        *) wal -ni "$f"; feh --bg-scale "$f" ;;
+        esac
+}}
+
 set previewer ~/.config/lf/previewer
 set cleaner ~/.config/lf/cleaner

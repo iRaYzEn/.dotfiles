@@ -9,7 +9,7 @@ deck_name=$(curl -s "$anki_server" \
   -X POST \
   -d '{"action": "deckNames", "version": 6}' \
   | jq -r '.result[] | select(. != "Default")' \
-  | dmenu -p "Deck:")
+  | dmenu -l 10 -p "Deck:")
 
 
 [ -z "$deck_name" ] && exit 0

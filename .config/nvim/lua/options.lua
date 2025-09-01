@@ -37,3 +37,4 @@ vim.opt.ignorecase = true
 
 vim.opt.termguicolors = true
 vim.opt.colorcolumn = "80"
+vim.opt.termguicolors = false 

@@ -1,11 +1,11 @@
 # background = #2a251b
 # background = #0c0c0c
-background = #1c1c1c
+# background = #1c1c1c
 # background = #333333
 # background = #000000
 # background = #282A36
 # foreground = #ffffff
-font-family = "Jetbrains Mono"
+# font-family = "Jetbrains Mono"
 cursor-style-blink = false
 cursor-style = block 
 shell-integration = zsh
@@ -15,14 +15,15 @@ shell-integration = zsh
 #integration entirely. fuck this feature 2 hours of life wasted and second gessing whether i should change to urxvt
 shell-integration-features = no-cursor
 mouse-hide-while-typing = true
-background-opacity = .90
+background-opacity = .96
 # background-blur = 100
 auto-update = download
 gtk-titlebar = false
 font-size = 13
 # theme = rose-pine-moon
 # theme = miasma
-theme = catppuccin-frappe
+# theme = catppuccin-frappe
+theme="/home/rayzen/.cache/wal/colors-ghostty"
 confirm-close-surface = false
 
 # for sicp

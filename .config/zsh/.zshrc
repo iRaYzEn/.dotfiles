@@ -12,7 +12,6 @@ source $ZSH/oh-my-zsh.sh
 bindkey -M viins 'jk' vi-cmd-mode
 bindkey -s ^f 'tmux-sessionizer\n'
 bindkey -s ^p '/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1\n'
-export TERM=xterm-256color
 
 #nvim
 # export PATH="$PATH:/opt/nvim-linux-x86_64/bin"

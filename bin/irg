@@ -1,7 +1,7 @@
 #!/bin/sh
 # ipod ready gpt blob
 # Desired size
-SIZE="400x400"
+SIZE="600x600"
 
 # Loop through .m4a files
 for f in *.m4a; do

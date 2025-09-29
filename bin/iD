@@ -2,4 +2,4 @@
 
 # helps me get a youtube rss feed
 
-curl -L "https://www.youtube.com/@$1" | grep -oP '"channelId":"UC[^"]+' | head -n 1 | cut -d'"' -f4
+echo $(curl -L "https://www.youtube.com/@$1" | grep -oP '"channelId":"UC[^"]+' | head -n 1 | cut -d'"' -f4)

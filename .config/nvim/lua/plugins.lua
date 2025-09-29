@@ -61,6 +61,6 @@ return {
             -- })
         end,
     },
-    {'dylanaraps/wal.vim'},
+    -- {'dylanaraps/wal.vim'},
     -- end colorschemes
 }

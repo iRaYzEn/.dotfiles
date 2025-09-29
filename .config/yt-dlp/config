@@ -1,6 +1,6 @@
 yt-dlp -o "%(title)s.%(ext)s" \
   --embed-thumbnail \
-  --postprocessor-args "ConvertThumbnail:-resize 400x400"
+  --postprocessor-args "ConvertThumbnail:-resize 600x600"
   --embed-metadata \
   --format m4a \
   --default-search ytsearch \

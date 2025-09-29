@@ -14,3 +14,6 @@ while IFS= read -r line; do
 done < $1
 cd $HOME/media/music/$treeGenre/$branchGenre/$subGenre && irg
 
+if [ "$2" = "-p" ]; then
+    poweroff
+fi

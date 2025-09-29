@@ -36,8 +36,7 @@ text-width 80
 # -- navigation ----------------------------------------------------------------
 
 goto-next-feed no
-prepopulate-query-feeds yes
-browser "open -g -a 'brave-browser' %u"
+# browser "exec -g -a 'brave' %u"
 
 bind-key j down feedlist
 bind-key k up feedlist
@@ -66,15 +65,11 @@ bind-key U show-urls
 #unbind-key C feedlist
 #confirm-exit no
 #cleanup-on-quit no
-#
-#
-#
 
-browser brave-browser
+browser brave
 macro , open-in-browser
-macro t set browser "qndl" ; open-in-browser ; set browser brave-browser
-macro a set browser "tsp yt-dlp --embed-metadata -xic -f bestaudio/best --restrict-filenames" ; open-in-browser ; set browser brave-browser
-macro v set browser "setsid -f mpv" ; open-in-browser ; set browser brave-browser
+macro t set browser "qndl" ; open-in-browser ; set browser brave
+macro v set browser "mpv" ; open-in-browser ; set browser brave
 macro w set browser "lynx" ; open-in-browser ; set browser brave-browser
 macro d set browser "dmenuhandler" ; open-in-browser ; set browser brave-browser
 macro c set browser "echo %u | xclip -r -sel c" ; open-in-browser ; set browser brave-browser

@@ -24,7 +24,6 @@ vim.opt.signcolumn = "yes"
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
-
 -- for virtual mode
 -- vim.opt.virtualedit = false
 
@@ -35,6 +34,7 @@ vim.opt.inccommand = "split"
 
 vim.opt.ignorecase = true
 
-vim.opt.termguicolors = true
+-- vim.opt.termguicolors = true
 vim.opt.colorcolumn = "80"
-vim.opt.termguicolors = false 
+
+-- vim.opt.termguicolors = false

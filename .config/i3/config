@@ -1,19 +1,24 @@
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $unfocused i3wm.color16 #f0f0f0
 set_from_resource $focused i3wm.color7 #f0f0f0
 
 # class                 border  backgr. text indicator child_border
 client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $bg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
-client.focused          $focused $focused $fg $focused $focused
 client.background       $bg
+# client.focused          $focused $focused $fg $focused $focused
+client.focused           i3wm.colors.primary #285577 #ffffff #2e9ef4   #285577
 
 for_window [class="^.*"] border pixel 2
                           # without pywal
                           # class                 border      backgr. text    indicator child_border
-# for_window [class="^.*"] client.focused           i3wm.colors.primary #285577 #ffffff #2e9ef4   #285577
+# for_window [class="^.*"] 
+
+
+
 
 for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] move scratchpad 
@@ -101,8 +106,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 ## gaps
 
-gaps inner 4
-# gaps outer 2
+gaps inner 12
+gaps outer 1
 
 # set $fm eDP-1
 # set $sm HDMI-1
@@ -139,23 +144,23 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 # i3status
-# bar {
-#         status_command i3status 
-#         tray_output primary
-#         font pango:DejaVu Sans Mono 13
-#         separator_symbol " | "
-#         position top
-#         # colors {
-#         #     # statusline #0F0A01  
-#         #     # statusline #CEECEE  
-#         #     # separator #FEFEFE
-#         # }
-#         colors { # for pywal
-#             background $bg
-#             statusline $fg
-#             separator $fg
-#         }
-# }
+bar {
+        status_command i3status 
+        tray_output primary
+        font pango:DejaVu Sans Mono 10
+        separator_symbol " | "
+        position top
+        # colors {
+        #     # statusline #0F0A01  
+        #     # statusline #CEECEE  
+        #     # separator #FEFEFE
+        # }
+        colors { # for pywal
+            background $bg
+            statusline $fg
+            separator $fg
+        }
+}
 
 # ------------------------------------------
 # CUSTOM KEYS START
@@ -197,8 +202,8 @@ bindsym $mod+shift+x exec i3lock --color=000000
 exec --no-startup-id xcompmgr
 exec --no-startup-id brave
 # change the layout of the keyboard
-exec_always --no-startup-id key lap
-exec --no-startup-id wal -ni $HOME/media/pictures/wal_best/a_girl_standing_on_a_road_with_trees_and_mountains_in_the_background.jpg; feh --bg-scale $HOME/media/pictures/wal_best/a_girl_standing_on_a_road_with_trees_and_mountains_in_the_background.jpg ;
+exec --no-startup-id key lap 
+exec --no-startup-id wal -ni $HOME/media/pictures/wal_best/a_painting_of_flowers_and_leaves.jpeg; feh --bg-scale $HOME/media/pictures/wal_best/a_painting_of_flowers_and_leaves.jpeg;
 exec --no-startup-id polybar rayzen
 exec --no-startup-id mpd
 exec --no-startup-id dunst
@@ -223,6 +228,8 @@ assign [class="(?i)figma-linux"] 4
 assign [class="(?i)Anki"] 4
 assign [class="(?i)com.github.xournalpp.xournalpp"] 3
 
+
+
 # mpc
 bindsym Mod4+plus exec mpc volume +5
 bindsym Mod4+minus exec mpc volume -5
@@ -231,3 +238,4 @@ bindsym Mod4+p exec mpc prev
 bindsym Mod4+f exec mpc seek +5
 bindsym Mod4+b exec mpc seek -5
 bindsym Mod4+space exec mpc toggle
+bindsym $mod+p exec flameshot gui

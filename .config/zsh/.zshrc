@@ -23,6 +23,7 @@ alias fly="flyctl"
 alias vim="nvim"
 alias news="newsboat"
 alias lf="lfub"
+alias flameshot="flameshot gui -r | xclip -selection clipboard -t image/png -i"
 # alias vpnoff="sudo wg-quick up wg0"
 # alias vpnon="sudo wg-quick down wg0"
 

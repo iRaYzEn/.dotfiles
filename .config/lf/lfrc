@@ -1,12 +1,37 @@
-
-map D Delete
-
-cmd open ${{
-    case $(file --mine-type "$f" -bL) in
-        image/*|application/json) $EDITOR $"f";;
-        *) wal -ni "$f"; feh --bg-scale "$f" ;;
-        esac
-}}
+set ignorecase true
+set icons true
 
 set previewer ~/.config/lf/previewer
 set cleaner ~/.config/lf/cleaner
+
+cmd unarchive ${{
+    case "$f" in
+        *.zip) unzip "$f";;
+        *.tar|*.tar.gz|*.tar.bz2) tar -xvf "$f" ;;
+        esac
+}}
+
+cmd setwall ${{
+    case "$f" in
+       *.png|*.jpg|*.webp) wal -ni "$f"; feh --bg-scale "$f" ;;  
+    esac
+}}
+
+cmd open ${{
+    case "$f" in
+        *.pdf|*.epub) brave "$f";;
+        *.png|*.jpg|*.webp|*.jpeg) brave "$f";;
+        *.mp4|*.mkv|*.mp3|*.flac) mpv "$f";;
+    esac
+}}
+
+map sw setwall
+map au unarchive
+map D delete
+
+map gd cd ~/dl
+map gc cd ~/media/cinema/
+map gb cd ~/media/docs/books/
+map gw cd ~/media/pics/wal_best/
+map gm cd ~/media/pics/math/
+map gv cd ~/media/vids/

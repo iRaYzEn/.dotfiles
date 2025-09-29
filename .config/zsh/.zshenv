@@ -14,6 +14,7 @@ export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 
 export TERMINAL=ghostty
+export BROWSER=brave
 
 # [ -d "$XDG_STATE_HOME"/zsh ] || sudo mkdir -p "$XDG_STATE_HOME"/zsh
 # export HISTFILE="$XDG_STATE_HOME"/zsh/history

@@ -4,6 +4,8 @@ set icons true
 set previewer ~/.config/lf/previewer
 set cleaner ~/.config/lf/cleaner
 
+set ratios 1:1:3
+
 cmd unarchive ${{
     case "$f" in
         *.zip) unzip "$f";;
@@ -11,23 +13,45 @@ cmd unarchive ${{
         esac
 }}
 
+cmd setall ${{
+    case "$f" in
+       *.png|*.jpg|*.webp|*.jpeg|*.gif) wal -ni "$f"; feh --bg-scale "$f"; echo "$f" > ~/.local/share/wall.txt;;  
+    esac
+}}
+
+cmd settheme ${{
+    case "$f" in
+       *.png|*.jpg|*.webp|*.jpeg|*.gif) wal -ni "$f";;
+    esac
+}}
+
 cmd setwall ${{
     case "$f" in
-       *.png|*.jpg|*.webp) wal -ni "$f"; feh --bg-scale "$f" ;;  
+       *.png|*.jpg|*.webp|*.jpeg|*.gif) feh --bg-scale "$f"; echo "$f" > ~/.local/share/wall.txt;;
+    esac
+}}
+
+cmd setwallCenter ${{
+    case "$f" in
+       *.png|*.jpg|*.webp|*.jpeg|*.gif) feh --bg-center "$f"; echo "$f" > ~/.local/share/wall.txt;;
     esac
 }}
 
 cmd open ${{
     case "$f" in
-        *.pdf|*.epub) brave "$f";;
-        *.png|*.jpg|*.webp|*.jpeg) brave "$f";;
-        *.mp4|*.mkv|*.mp3|*.flac) mpv "$f";;
+        *.pdf|*.epub|*.mobi) brave "$f";;
+        *.png|*.jpg|*.webp|*.jpeg) devour sxiv "$f";;
+        *.mp4|*.mkv|*.mp3|*.flac) devour mpv "$f";;
     esac
 }}
 
 map sw setwall
-map au unarchive
+map st settheme
+map sa setall
+map sc setwallCenter
+map x unarchive
 map D delete
+
 
 map gd cd ~/dl
 map gc cd ~/media/cinema/
@@ -35,3 +59,5 @@ map gb cd ~/media/docs/books/
 map gw cd ~/media/pics/wal_best/
 map gm cd ~/media/pics/math/
 map gv cd ~/media/vids/
+map gp cd ~/media/pics
+map gr cd ~/repos/

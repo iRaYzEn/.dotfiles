@@ -9,16 +9,13 @@ client.unfocused        $bg     $bg     $bg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
-# client.focused          $focused $focused $fg $focused $focused
-client.focused           i3wm.colors.primary #285577 #ffffff #2e9ef4   #285577
+client.focused          $focused $focused $fg $focused $focused
+# client.focused           i3wm.colors.primary #000000 #000000 #000000   #000000
 
 for_window [class="^.*"] border pixel 2
                           # without pywal
                           # class                 border      backgr. text    indicator child_border
 # for_window [class="^.*"] 
-
-
-
 
 for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] move scratchpad 
@@ -28,11 +25,11 @@ for_window [instance="dropdown"] move scratchpad
 set $mod Mod1
 # set $mod Mod4
 
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 bindsym $mod+Return exec i3-sensible-terminal 
+# bindsym $mod+Return exec st 
 
 bindsym $mod+q kill
 
@@ -106,8 +103,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 ## gaps
 
-gaps inner 12
-gaps outer 1
+# gaps inner 4
+# gaps outer 4
 
 # set $fm eDP-1
 # set $sm HDMI-1
@@ -141,25 +138,28 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+exec --no-startup-id wal -ni $HOME/media/pics/wal_best/a_bouquet_of_flowers.jpg
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 # i3status
 bar {
-        status_command i3status 
+        status_command i3status
         tray_output primary
-        font pango:DejaVu Sans Mono 10
+        # font pango:DejaVu Sans Mono 10
+        font pango:Jebrain Mono 8
         separator_symbol " | "
         position top
-        # colors {
-        #     # statusline #0F0A01  
-        #     # statusline #CEECEE  
-        #     # separator #FEFEFE
-        # }
-        colors { # for pywal
-            background $bg
-            statusline $fg
-            separator $fg
+        colors {
+            statusline #0F0A01  
+            statusline #CEECEE  
+            separator #FEFEFE
         }
+        # colors { # for pywal
+        #     background $bg
+        #     statusline $fg
+        #     separator $fg
+        # }
 }
 
 # ------------------------------------------
@@ -169,46 +169,30 @@ bar {
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
 
-# runing programs on startup and move them to scratchpad
-for_window [instance="rmpc"] move scratchpad; [instance="rmpc"] scratchpad show; resize set height 300px; resize set width 900px; move window position center; move scratchpad;
-exec --no-startup-id ghostty --x11-instance-name=rmpc -e rmpc 
-
-for_window [instance="tasks"] move scratchpad
-exec --no-startup-id ghostty --x11-instance-name=tasks -e tmux
-
 bindsym $mod+t [instance="tasks"] scratchpad show
 bindsym $mod+m [instance="rmpc"] scratchpad show; 
-
 bindsym $mod+c exec i3-msg move window position center
 
-# Show the first scratchpad window
+# system stuff
+bindsym $mod+shift+x exec i3lock --color=000000
 bindsym $mod+minus scratchpad show
 
+# keybinds for stuff i use
 bindsym $mod+s exec spotify
-bindsym $mod+ctrl+p exec mon pc
-bindsym $mod+ctrl+l exec mon lap
+# bindsym $mod+ctrl+p exec mon pc
+# bindsym $mod+ctrl+l exec mon lap
 bindsym $mod+shift+d exec discord
 bindsym $mod+b exec brave
 bindsym $mod+n exec nitrogen
-bindsym $mod+o exec obsidian
+# bindsym $mod+o exec obsidian
+bindsym $mod+o exec logseq
 bindsym $mod+a exec anki
-bindsym $mod+shift+f exec figma-linux
-bindsym $mod+shift+p exec poweroff
+bindsym $mod+shift+p exec power
+bindsym $mod+shift+f exec i3-sensible-terminal -e lf
+bindsym $mod+shift+n exec i3-sensible-terminal -e newsboat
+bindsym $mod+p exec flameshot gui
 
-# Suspend
-bindsym $mod+shift+x exec i3lock --color=000000
-
-# exec --no-startup-id nitrogen --restore
-exec --no-startup-id xcompmgr
-exec --no-startup-id brave
-# change the layout of the keyboard
-exec --no-startup-id key lap 
-exec --no-startup-id wal -ni $HOME/media/pictures/wal_best/a_painting_of_flowers_and_leaves.jpeg; feh --bg-scale $HOME/media/pictures/wal_best/a_painting_of_flowers_and_leaves.jpeg;
-exec --no-startup-id polybar rayzen
-exec --no-startup-id mpd
-exec --no-startup-id dunst
-
-# Set default keyboard layout to English (us) and Arabic (ar)
+# Set default keyboard layout to English (us) and Arabic (ara)
 exec_always --no-startup-id setxkbmap -layout us,ara -option 'grp:alt_space_toggle'
 
 # FKeys
@@ -217,18 +201,8 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #i
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 # # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
-
-assign [class="(?i)brave-browser"] 2
-assign [class="(?i)obsidian"] 1
-assign [class="(?i)spotify"] 8
-assign [class="(?i)discord"] 10
-assign [class="(?i)figma-linux"] 4
-assign [class="(?i)Anki"] 4
-assign [class="(?i)com.github.xournalpp.xournalpp"] 3
-
-
+bindsym XF86MonBrightnessUp exec brightnessctl set +20% #increase screen brightness
+bindsym XF86MonBrightnessDown exec brightnessctl set 20%- # decrease screen brightness
 
 # mpc
 bindsym Mod4+plus exec mpc volume +5
@@ -238,4 +212,43 @@ bindsym Mod4+p exec mpc prev
 bindsym Mod4+f exec mpc seek +5
 bindsym Mod4+b exec mpc seek -5
 bindsym Mod4+space exec mpc toggle
-bindsym $mod+p exec flameshot gui
+bindsym $mod+ctrl+s exec playerctl play-pause --player=spotify
+bindsym $mod+ctrl+n exec playerctl next --player=spotify
+bindsym $mod+ctrl+p exec playerctl previous --player=spotify
+bindsym $mod+ctrl+plus exec playerctl volume 0.1+ --player=spotify
+bindsym $mod+ctrl+minus exec playerctl volume 0.1- --player=spotify
+
+# ------------------------------------------
+# AUTO START
+# ------------------------------------------
+
+# exec --no-startup-id nitrogen --restore
+exec --no-startup-id setwall
+exec --no-startup-id xcompmgr
+exec --no-startup-id brave
+# change the layout of the keyboard
+exec --no-startup-id key lap 
+exec --no-startup-id mpd
+exec --no-startup-id dunst
+exec --no-startup-id flameshot
+exec --no-startup-id spotify
+
+exec --no-startup-id ghostty --x11-instance-name=rmpc -e rmpc 
+# exec --no-startup-id st -name=rmpc -e rmpc 
+
+exec --no-startup-id ghostty --x11-instance-name=tasks -e tmux
+# exec --no-startup-id st -name=tasks -e tmux 
+
+# runing programs on startup and move them to scratchpad
+for_window [instance="rmpc"] move scratchpad; [instance="rmpc"] scratchpad show; resize set height 500px; resize set width 900px; move window position center; move scratchpad;
+for_window [instance="tasks"] move scratchpad
+for_window [instance="power"] floating toggle; [instance="power"] resize set height 5px; [instance="power"] resize set width 10px;
+
+assign [class="(?i)brave-browser"] 2
+assign [class="(?i)obsidian"] 1
+assign [class="(?i)logseq"] 1
+assign [class="(?i)spotify"] 8
+assign [class="(?i)discord"] 10
+assign [class="(?i)figma-linux"] 4
+assign [class="(?i)Anki"] 4
+assign [class="(?i)com.github.xournalpp.xournalpp"] 3

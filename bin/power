@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ghostty --x11-instance-name=power -e timer 10 -p

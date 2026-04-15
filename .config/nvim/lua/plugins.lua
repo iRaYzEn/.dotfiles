@@ -61,6 +61,7 @@ return {
             -- })
         end,
     },
-    -- {'dylanaraps/wal.vim'},
+    -- {"github/copilot.vim"},
+    {'dylanaraps/wal.vim'},
     -- end colorschemes
 }

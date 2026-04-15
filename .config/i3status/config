@@ -33,15 +33,15 @@ tztime local {
 }
 
 load {
-        format = "%1min"
+        format = "CPU: %1min"
 }
 
 memory {
-    format = "%used"
+    format = "RAM USED: %used"
 }
 
 disk "/" {
-        format = "%avail"
+        format = "DISK: %avail"
 }
 
 volume master {
@@ -51,3 +51,4 @@ volume master {
         mixer = "Master"
         mixer_idx = 0
 }
+

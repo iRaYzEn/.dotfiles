@@ -1,0 +1,5 @@
+auto-cpufreq
+brave-bin
+spotdl
+spotify
+devour

@@ -9,8 +9,8 @@ return {
 
         function ColorMyPencils(color)
             -- color = color or "miasma"
-            color = color or "rose-pine-main"
             -- color = color or "fahrenheit"
+            color = color or "rose-pine-main"
             -- color = color or "gruvbox"
             -- color = color or "catppuccin"
             -- color = color or "tokyonight-night"

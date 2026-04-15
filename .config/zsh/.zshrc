@@ -23,9 +23,13 @@ alias fly="flyctl"
 alias vim="nvim"
 alias news="newsboat"
 alias lf="lfub"
-alias flameshot="flameshot gui -r | xclip -selection clipboard -t image/png -i"
-# alias vpnoff="sudo wg-quick up wg0"
-# alias vpnon="sudo wg-quick down wg0"
+# alias flameshot="flameshot gui -r | xclip -selection clipboard -t image/png -i"
+alias mpv="devour mpv"
+alias sxiv="devour sxiv"
+alias sx="startx"
+alias vpnoff="sudo wg-quick down wg0 && sudo systemctl restart NetworkManager.service"
+alias vpnon="sudo resolvconf -u && sudo wg-quick up wg0"
+# alias fzf=fzfub
 
 # ### exports ###
 
@@ -62,4 +66,6 @@ export PATH="$PATH:$HOME/bin"
 #   eval "`fnm env`"
 # fi
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[ -f "/home/rayzen/.ghcup/env" ] && . "/home/rayzen/.ghcup/env" # ghcup-env

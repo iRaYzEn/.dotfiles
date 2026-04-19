@@ -1,8 +1,8 @@
 return {
     -- "xero/miasma.nvim",
-    "rose-pine/neovim",
+    -- "rose-pine/neovim",
     -- "fcpg/vim-fahrenheit",
-    -- "morhetz/gruvbox",
+    "morhetz/gruvbox",
     -- "catppuccin/nvim",
     -- "folke/tokyonight.nvim",
     config = function()
@@ -10,8 +10,8 @@ return {
         function ColorMyPencils(color)
             -- color = color or "miasma"
             -- color = color or "fahrenheit"
-            color = color or "rose-pine-main"
-            -- color = color or "gruvbox"
+            -- color = color or "rose-pine-main"
+            color = color or "gruvbox"
             -- color = color or "catppuccin"
             -- color = color or "tokyonight-night"
             -- color = color or "wal"

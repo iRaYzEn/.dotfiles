@@ -186,7 +186,7 @@ bindsym $mod+b exec brave
 bindsym $mod+n exec nitrogen
 # bindsym $mod+o exec obsidian
 bindsym $mod+o exec logseq
-bindsym $mod+a exec anki
+bindsym $mod+a exec pavucontrol
 bindsym $mod+shift+p exec power
 bindsym $mod+shift+f exec i3-sensible-terminal -e lf
 bindsym $mod+shift+n exec i3-sensible-terminal -e newsboat
@@ -206,7 +206,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 bindsym XF86MonBrightnessUp exec brightnessctl set +20% #increase screen brightness
 bindsym XF86MonBrightnessDown exec brightnessctl set 20%- # decrease screen brightness
 
-# mpc
+# mpc/playerctl client
 bindsym Mod4+plus exec mpc volume +5
 bindsym Mod4+minus exec mpc volume -5
 bindsym Mod4+n exec mpc next
@@ -214,11 +214,20 @@ bindsym Mod4+p exec mpc prev
 bindsym Mod4+f exec mpc seek +5
 bindsym Mod4+b exec mpc seek -5
 bindsym Mod4+space exec mpc toggle
+
 bindsym $mod+ctrl+s exec playerctl play-pause --player=spotify
 bindsym $mod+ctrl+n exec playerctl next --player=spotify
 bindsym $mod+ctrl+p exec playerctl previous --player=spotify
 bindsym $mod+ctrl+plus exec playerctl volume 0.1+ --player=spotify
 bindsym $mod+ctrl+minus exec playerctl volume 0.1- --player=spotify
+
+bindsym $mod+Mod4+s exec playerctl play-pause --player=brave
+bindsym $mod+Mod4+n exec playerctl next --player=brave
+bindsym $mod+Mod4+p exec playerctl previous --player=brave
+bindsym $mod+Mod4+f exec playerctl position 5+ --player=brave
+bindsym $mod+Mod4+b exec playerctl position 5- --player=brave
+bindsym $mod+Mod4+plus exec playerctl volume 0.1+ --player=brave
+bindsym $mod+Mod4+minus exec playerctl volume 0.1- --player=brave
 
 # ------------------------------------------
 # AUTO START

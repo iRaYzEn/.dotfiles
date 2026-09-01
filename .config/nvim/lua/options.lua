@@ -38,4 +38,4 @@ vim.opt.ignorecase = true
 vim.opt.colorcolumn = "80"
 
 -- for pywall 
--- vim.opt.termguicolors = false
+-- vim.opt.termguicolors = notgc

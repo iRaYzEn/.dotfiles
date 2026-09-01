@@ -15,6 +15,7 @@ export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 
 export TERMINAL=ghostty
 export BROWSER=brave
+export OLLAMA_HOST=0.0.0.0:11434.
 
 # [ -d "$XDG_STATE_HOME"/zsh ] || sudo mkdir -p "$XDG_STATE_HOME"/zsh
 # export HISTFILE="$XDG_STATE_HOME"/zsh/history

@@ -12,7 +12,12 @@ client.background       $bg
 client.focused          $focused $focused $fg $focused $focused
 # client.focused           i3wm.colors.primary #000000 #000000 #000000   #000000
 
+
 for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] floating_border pixel 1
+
+for_window [class="st"] border pixel 0
+for_window [class="st"] floating_border pixel 0
                           # without pywal
                           # class                 border      backgr. text    indicator child_border
 # for_window [class="^.*"] 
@@ -28,7 +33,8 @@ set $mod Mod1
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-bindsym $mod+Return exec i3-sensible-terminal 
+
+bindsym $mod+Return exec st 
 # bindsym $mod+Return exec st 
 
 bindsym $mod+q kill
@@ -103,8 +109,11 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 ## gaps
 
-# gaps inner 4
-# gaps outer 4
+# gaps inner 8
+# gaps outer 2
+
+gaps inner 14
+gaps outer 4
 
 # set $fm eDP-1
 # set $sm HDMI-1
@@ -121,8 +130,8 @@ mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
         bindsym h resize shrink width 5 px or 5 ppt
-        bindsym j resize grow height 5 px or 5 ppt
-        bindsym k resize shrink height 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym j resize shrink height 5 px or 5 ppt
         bindsym l resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
@@ -146,8 +155,9 @@ exec --no-startup-id wal -ni $HOME/media/pics/wal_best/a_bouquet_of_flowers.jpg
 bar {
         status_command i3status
         tray_output primary
-        # font pango:DejaVu Sans Mono 10
-        font pango:Jebrain Mono 8
+        font pango:DejaVu Sans Mono 10
+        # font pango:Jebrain Mono 8
+        # font pango:iosevka 10
         separator_symbol " | "
         position top
         colors {
@@ -174,8 +184,8 @@ bindsym $mod+m [instance="rmpc"] scratchpad show;
 bindsym $mod+c exec i3-msg move window position center
 
 # system stuff
-bindsym $mod+shift+x exec i3lock --color=000000
-bindsym $mod+minus scratchpad show
+bindsym $mod+shift+x exec setxkbmap -layout us; exec i3lock --color=000000
+bindsym $mod+minus scratchpad Show
 
 # keybinds for stuff i use
 bindsym $mod+s exec spotify
@@ -188,8 +198,8 @@ bindsym $mod+n exec nitrogen
 bindsym $mod+o exec logseq
 bindsym $mod+a exec pavucontrol
 bindsym $mod+shift+p exec power
-bindsym $mod+shift+f exec i3-sensible-terminal -e lf
-bindsym $mod+shift+n exec i3-sensible-terminal -e newsboat
+bindsym $mod+shift+f exec st -e lf
+bindsym $mod+shift+n exec st -e newsboat
 bindsym $mod+e exec evince
 bindsym $mod+p exec flameshot gui
 
@@ -244,11 +254,11 @@ exec --no-startup-id dunst
 exec --no-startup-id flameshot
 exec --no-startup-id spotify
 
-exec --no-startup-id ghostty --x11-instance-name=rmpc -e rmpc 
-# exec --no-startup-id st -name=rmpc -e rmpc 
+# exec --no-startup-id ghostty --x11-instance-name=rmpc -e rmpc 
+exec --no-startup-id st -name=rmpc -e rmpc 
 
-exec --no-startup-id ghostty --x11-instance-name=tasks -e tmux
-# exec --no-startup-id st -name=tasks -e tmux 
+# exec --no-startup-id ghostty --x11-instance-name=tasks -e tmux
+exec --no-startup-id st -name=tasks -e tmux 
 
 # runing programs on startup and move them to scratchpad
 for_window [instance="rmpc"] move scratchpad; [instance="rmpc"] scratchpad show; resize set height 500px; resize set width 900px; move window position center; move scratchpad;

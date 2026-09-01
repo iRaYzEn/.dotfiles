@@ -22,7 +22,6 @@ order += "volume master"
 order += "load"
 order += "tztime local"
 
-
 battery all {
         format = "%status %percentage %remaining"
 }
